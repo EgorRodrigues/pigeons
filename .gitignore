@@ -1,0 +1,61 @@
+# Project related
+.idea
+.iml
+*.idea
+*.iml
+.cache/
+
+# Java related
+pom.xml
+pom.xml.asc
+*jar
+*.class
+
+# Leiningen
+classes/
+lib/
+native/
+checkouts/
+target/
+.lein-*
+repl-port
+.nrepl-port
+.repl
+
+# Temp Files
+*.orig
+*~
+.*.swp
+.*.swo
+*.tmp
+*.bak
+
+# OS X
+.DS_Store
+
+# Logging
+*.log
+/logs/
+
+# Builds
+out/
+build/
+
+# Leningen from https://github.com/github/gitignore/blob/master/Leiningen.gitignore
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/lib/
+/classes/
+/target/
+/checkouts/
+.lein-deps-sum
+.lein-repl-history
+.lein-plugins/
+.lein-failures
+.nrepl-port
+.cpcache/
+
+# Environment
+**/.env

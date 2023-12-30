@@ -1,0 +1,7 @@
+;;mongodb+srv://root:drGxvyjiydpHoLbH@cluster0.dyhsuak.mongodb.net/whatsapp
+;;"mongodb://root:example@localhost:27017/chat-message?authSource=admin"
+
+{:db-uri "mongodb+srv://root:drGxvyjiydpHoLbH@cluster0.dyhsuak.mongodb.net/whatsapp"
+ :port   3000
+ :env    :prod
+ :token  "test"}

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a650b76-daab-45c6-9bc3-678a72ca6a88" name="Changes" comment="create DataBase">
+      <change afterPath="$PROJECT_DIR$/config/config.edn" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pigeons/di/component.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pigeons/di/context_deps.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pigeons/di/http_config.clj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pigeons/di/pedestal.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project.clj" beforeDir="false" afterPath="$PROJECT_DIR$/project.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pigeons/components.clj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pigeons/db/mongo/database_component.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/pigeons/di/mongo.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pigeons/diplomat/http_server.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/pigeons/diplomat/http_server.clj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pigeons/server.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/pigeons/server.clj" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Clojure Namespace" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$MAVEN_REPOSITORY$/com/novemberain/monger/3.1.0/monger-3.1.0.jar!/monger/core.clj" root0="SKIP_INSPECTION" />
+    <setting file="jar://$MAVEN_REPOSITORY$/io/pedestal/pedestal.service/0.6.3/pedestal.service-0.6.3.jar!/io/pedestal/http.clj" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2aFN7nXVMPGxdHapXsh7oMOlm8j" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;cursive.last.file.extension./Users/egor.rodrigues/dev/egor/pigeons/src&quot;: &quot;clj&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/pigeons/di" />
+      <recent name="$PROJECT_DIR$/src/pigeons/components" />
+    </key>
+  </component>
+  <component name="ReplState" timestamp="1708233147486">{:repl-history {:ide [], :local [{:command &quot;(:require '[com.stuartsierra.component :as component]\n '[monger.core :as mg])&quot;, :offset 77, :ns &quot;pigeons.server&quot;} {:command &quot;(def {:keys [conn db]} (mg/connect-via-uri \&quot;mongodb://localhost:27017\&quot;))&quot;, :offset 72, :ns &quot;pigeons.server&quot;} {:command &quot;(def database (mg/connect-via-uri \&quot;mongodb://localhost:27017\&quot;))&quot;, :offset 63, :ns &quot;pigeons.server&quot;} {:command &quot;database&quot;, :offset 8, :ns &quot;pigeons.server&quot;} {:command &quot;(:conn database)&quot;, :offset 16, :ns &quot;pigeons.server&quot;} {:command &quot;(:db database)&quot;, :offset 14, :ns &quot;pigeons.server&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://root:example@mongo:27017/wa-message\&quot;))&quot;, :offset 74, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mg/connct)&quot;, :offset 11, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mg/connect)&quot;, :offset 12, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(let [conn (mg/connect)\n      db   (mg/get-db conn \&quot;monger-test\&quot;)])&quot;, :offset 67, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;conn &quot;, :offset 5, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(defn conectar-mongodb [host port database]\n  (mg/connect {:host host\n               :port port\n               :db database}))&quot;, :offset 126, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(defn desconectar-mongodb [conn]\n  (mg/disconnect conn))&quot;, :offset 56, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(defn inserir-dados [conn collection-name data]\n  (mg/insert conn (mg/collection collection-name) data))\n\n(defn buscar-dados [conn collection-name query]\n  (mg/find conn (mg/collection collection-name) query))&quot;, :offset 209, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(conectar-mongodb \&quot;localhost\&quot; 27017 \&quot;wa-message\&quot;)&quot;, :offset 49, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://root:example@localhost:27017/wa-message\&quot;))&quot;, :offset 78, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mongo)&quot;, :offset 7, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;conn&quot;, :offset 4, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def db (mg/get-db conn \&quot;wa-message\&quot;))&quot;, :offset 38, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/insert db \&quot;message-in\&quot; {:teste \&quot;teste\&quot;})&quot;, :offset 44, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def conn (mg/connect))&quot;, :offset 23, :ns &quot;pigeons.server&quot;} {:command &quot;(def db (mg/get-db conn \&quot;chat-massage\&quot;))&quot;, :offset 40, :ns &quot;pigeons.server&quot;} {:command &quot;(require '[monger.core :as mg])&quot;, :offset 31, :ns &quot;pigeons.server&quot;} {:command &quot;(def mongo (mg/connect-via-uri \&quot;mongodb://root:example@localhost:27017/wa-message\&quot;))&quot;, :offset 84, :ns &quot;pigeons.server&quot;} {:command &quot;(def mongo (mg/connect-via-uri \&quot;mongodb://root:example@localhost:27017/chat-message\&quot;))&quot;, :offset 86, :ns &quot;pigeons.server&quot;} {:command &quot;(mc/insert (:db mongo) \&quot;document\&quot; {:teste \&quot;teste\&quot;})&quot;, :offset 51, :ns &quot;pigeons.server&quot;} {:command &quot;(def conn (mg/connect {:host     \&quot;localhost\&quot;\n                       :port     27017\n                       :db       \&quot;chat-message\&quot;\n                       :username \&quot;root\&quot;\n                       :password \&quot;example\&quot;}))&quot;, :offset 217, :ns &quot;pigeons.server&quot;} {:command &quot;(def db (mg/get-db conn))&quot;, :offset 25, :ns &quot;pigeons.server&quot;} {:command &quot;(def db (mg/get-db conn \&quot;chat-message\&quot;))&quot;, :offset 40, :ns &quot;pigeons.server&quot;} {:command &quot;(mc/insert db \&quot;document\&quot; {:teste \&quot;teste\&quot;})&quot;, :offset 42, :ns &quot;pigeons.server&quot;} {:command &quot;(mc/insert-batch mongo \&quot;documents\&quot; [{ :first_name \&quot;John\&quot; :last_name \&quot;Lennon\&quot; }\n                                 { :first_name \&quot;Paul\&quot; :last_name \&quot;McCartney\&quot; }])&quot;, :offset 159, :ns &quot;pigeons.server&quot;} {:command &quot;(mc/insert-batch db \&quot;documents\&quot; [{ :first_name \&quot;John\&quot; :last_name \&quot;Lennon\&quot; }\n                                 { :first_name \&quot;Paul\&quot; :last_name \&quot;McCartney\&quot; }])&quot;, :offset 156, :ns &quot;pigeons.server&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://root:example@mongo:27017/chat-massage\&quot;))&quot;, :offset 76, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;mongo&quot;, :offset 5, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mongo/start)&quot;, :offset 13, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;mongo.start&quot;, :offset 11, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(component/stop mongo)&quot;, :offset 22, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/insert (:db db-conn) \&quot;document\&quot; {:teste \&quot;teste\&quot;})&quot;, :offset 53, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(:db db-conn)&quot;, :offset 13, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;db-conn&quot;, :offset 7, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/insert (:database db-conn) \&quot;document\&quot; {:teste \&quot;teste\&quot;})&quot;, :offset 59, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(:pigeons.db.mongo.database-component/connection db-conn)&quot;, :offset 57, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def db-conn (component/start mongo))&quot;, :offset 37, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/insert (:database db-conn) \&quot;document\&quot; {:teste \&quot;teste222\&quot;})&quot;, :offset 62, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://root:example@localhost:27017/chat-massage\&quot;))&quot;, :offset 80, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/insert (:database mongo) \&quot;document\&quot; {:teste \&quot;teste222\&quot;})&quot;, :offset 60, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;db&quot;, :offset 2, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(require '[monger.collection :as mc])&quot;, :offset 37, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://admin:12345678@localhost:27017/chat-massage\&quot;))&quot;, :offset 82, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(component/start mongo)&quot;, :offset 23, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://admin:12345678@localhost:27017/chat-massage?authSource=admin\&quot;))&quot;, :offset 99, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://admin:12345678@0.0.0.0:27017/chat-massage?authSource=admin\&quot;))&quot;, :offset 97, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def mongo (new-database \&quot;mongodb://admin:12345678@0.0.0.0:27017/chat-message?authSource=admin\&quot;))&quot;, :offset 97, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(def db (component/start mongo))&quot;, :offset 32, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/exists? (:database db) \&quot;document\&quot;)&quot;, :offset 38, :ns &quot;pigeons.db.mongo.database-component&quot;} {:command &quot;(mc/insert (:database db) \&quot;document\&quot; {:teste \&quot;teste222\&quot;})&quot;, :offset 57, :ns &quot;pigeons.db.mongo.database-component&quot;}], :remote []}}</component>
+  <component name="RunManager" selected="Clojure REPL.REPL for pigeons">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="REPL for pigeons" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
+      <option name="configVersion" value="1" />
+      <option name="displayName" value="REPL for pigeons" />
+      <option name="execution" value="LEININGEN" />
+      <module name="pigeons" />
+      <option name="options" />
+      <option name="profiles" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo-express: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mongo-express" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.mongo: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="envFilePath" value="" />
+          <option name="services">
+            <list>
+              <option value="mongo" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml.mongo-express: Compose Deployment" />
+        <item itemvalue="Clojure REPL.REPL for pigeons" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.mongo: Compose Deployment" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a650b76-daab-45c6-9bc3-678a72ca6a88" name="Changes" comment="" />
+      <created>1703910203018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703910203018</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1707969213388</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707969213388</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add docker-compose.yml">
+      <option name="closed" value="true" />
+      <created>1708119315525</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708119315525</updated>
+    </task>
+    <task id="LOCAL-00003" summary="create WebServer">
+      <option name="closed" value="true" />
+      <created>1708119661812</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708119661812</updated>
+    </task>
+    <task id="LOCAL-00004" summary="create WebServer">
+      <option name="closed" value="true" />
+      <created>1708131989361</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708131989361</updated>
+    </task>
+    <task id="LOCAL-00005" summary="create DataBase">
+      <option name="closed" value="true" />
+      <created>1708149410353</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708149410353</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add docker-compose.yml" />
+    <MESSAGE value="create WebServer" />
+    <MESSAGE value="create DataBase" />
+    <option name="LAST_COMMIT_MESSAGE" value="create DataBase" />
+  </component>
+</project>

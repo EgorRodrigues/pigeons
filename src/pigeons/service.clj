@@ -25,7 +25,7 @@
 (defn receive-msg
   [request]
   (pp/pprint (:json-params request))
-  {:status 202 :body (:json-params request)})
+  {:status 200})
 
 (def common-interceptors [(body-params/body-params) http/html-body])
 

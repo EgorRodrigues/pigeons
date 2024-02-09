@@ -38,3 +38,19 @@
         "X-Permitted-Cross-Domain-Policies" "none"
         "Content-Security-Policy" "object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;"})))
 
+(deftest webhook-test
+  ()
+  (is
+   (re-find #""
+            (:body (response-for service :get "/webhook"))))
+
+  #_(is (=
+       (:headers (response-for service :get "/webhook"))
+       {"Content-Type" "text/html;charset=UTF-8"
+        "Strict-Transport-Security" "max-age=31536000; includeSubdomains"
+        "X-Frame-Options" "DENY"
+        "X-Content-Type-Options" "nosniff"
+        "X-XSS-Protection" "1; mode=block"
+        "X-Download-Options" "noopen"
+        "X-Permitted-Cross-Domain-Policies" "none"
+        "Content-Security-Policy" "object-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'strict-dynamic' https: http:;"})))

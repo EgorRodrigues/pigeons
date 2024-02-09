@@ -23,8 +23,8 @@
     {:status 403}))
 
 (defn receive-msg
-  [request]
-  (pp/pprint (:json-params request))
+  [{:keys [json-params]}]
+  (pp/pprint json-params)
   {:status 200})
 
 (def common-interceptors [(body-params/body-params) http/html-body])

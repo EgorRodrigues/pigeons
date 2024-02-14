@@ -1,9 +1,9 @@
-(ns pigeons.service
-  (:require [io.pedestal.http :as http]
-            [io.pedestal.http.route :as route]
+(ns pigeons.diplomat.http-server
+  (:require [clojure.pprint :as pp]
+            [io.pedestal.http :as http]
             [io.pedestal.http.body-params :as body-params]
-            [ring.util.response :as ring-resp]
-            [clojure.pprint :as pp]))
+            [io.pedestal.http.route :as route]
+            [ring.util.response :as ring-resp]))
 
 (defn about-page
   [request]
@@ -29,15 +29,7 @@
 
 (def common-interceptors [(body-params/body-params) http/html-body])
 
-;; Tabular routes
 (def routes #{["/" :get (conj common-interceptors `home-page)]
               ["/about" :get (conj common-interceptors `about-page)]
               ["/webhook" :get (conj common-interceptors `verify-token)]
               ["/webhook" :post (conj common-interceptors `receive-msg)]})
-
-(def service {:env                 :prod
-              ::http/routes        routes
-              ::http/resource-path "/public"
-              ::http/type          :jetty
-              ::http/host          "0.0.0.0"
-              ::http/port          8080})

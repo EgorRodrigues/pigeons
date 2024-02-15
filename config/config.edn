@@ -1,0 +1,2 @@
+{:db-uri "mongodb://root:example@localhost:27017/chat-message?authSource=admin"
+ :port "3000"}

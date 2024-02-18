@@ -4,9 +4,7 @@
 (defrecord ContextDeps
   []
   component/Lifecycle
-  (start [this]
-    (println this)
-    this)
+  (start [this] this)
   (stop [this] this))
 
 (defn provides

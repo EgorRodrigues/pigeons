@@ -6,7 +6,6 @@
             [pigeons.di.mongo :as mongo]))
 
 (defn start-server [environment port]
-  (println environment port)
   (component/system-map
    :database (mongo/provides)
    :service-map (http-config/provides environment port)
